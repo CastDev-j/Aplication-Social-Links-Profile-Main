@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --Neon-Green: #C4F82A;
+    --White: #FFFFFF;
+    --Grey: #333333;
+    --Dark-Grey: #1F1F1F;
+    --Black: #141414;
+
+    --Space-elements: 24px;
+    --Card-width-content: 305px;
+
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--Black);
+    color: var(--White);
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.profile-card{
+    display: flex;
+    position: relative;
+    width: 385px;
+    height: 610px;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Dark-Grey);
+    border-radius: 10px;
+    padding: 40px;
+
+    & .profile-image{
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        margin-bottom: var(--Space-elements);
+    }
+
+    & .profile-name{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 4px;
+        width: var(--Card-width-content);
+        height: 36px;
+        text-align: center;
+    }
+
+    & .profile-location{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: var(--Space-elements);
+        color: var(--Neon-Green);
+        height: 21px;
+        width: var(--Card-width-content);
+        text-align: center;
+    }
+
+    & .profile-bio{
+        width: var(--Card-width-content);
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: var(--Space-elements);
+    }
+
+    & .profile-bio::before{
+        content: '"';
+    }
+
+    & .profile-bio::after{
+        content: '"';
+    }
+
+    & .social-links{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: var(--Card-width-content);
+        height: 290px;
+
+        & .social-link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            border-radius: 5px;
+            background-color: var(--Grey);
+            color: var(--White);
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+
+            transition: background-color 0.3s, color 0.3s;
+            
+        }
+
+        & .social-link:hover{
+            background-color: var(--Neon-Green);
+            color: var(--Black);
+        }
+    }
+
+
+}
+
+
+
+
+
