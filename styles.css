@@ -34,7 +34,6 @@
 
     --Space-elements: 24px;
     --Card-width-content: 305px;
-
 }
 
 body{
@@ -60,14 +59,15 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: var(--Dark-Grey);
-    border-radius: 10px;
+    border-radius:10px;
     padding: 40px;
 
     & .profile-image{
         width: 88px;
         height: 88px;
         border-radius: 50%;
-        margin-bottom: var(--Space-elements);
+        margin-bottom: var(--Space-elements);   
+        border: var(--Grey) 2px solid;
     }
 
     & .profile-name{
